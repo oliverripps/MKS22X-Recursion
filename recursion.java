@@ -7,7 +7,19 @@ public class recursion{
 
     */
     public static double sqrt(double n, double tolerance){
+      public static double isCloseEnough(double guess, double num){
+        return (Math.abs(guess*guess-num) < Math.abs(num * 0.0001));
+      }
 
+      public static double squareRoot(double num, double g){
+        if(isCloseEnough(g,num)){
+          return g;
+        }
+        else{
+          double guess=((num/g + g)/2);
+          squareRoot(num,guess);
+        }
+      }
     }
 
     /*Recursively find the n'th fibbonaci number in linear time
