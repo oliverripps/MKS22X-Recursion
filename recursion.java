@@ -6,9 +6,13 @@ public class recursion{
      *precondition: n is non-negative
 
     */
-    public static double isCloseEnough(double guess, double num){
-      return (Math.abs(guess*guess-num) < Math.abs(num * 0.0001));
+    public static double isCloseEnough(double guess, double num, double tolerance){
+      if(num==0){
+        return (guess==0);
+      }
+      return ((Math.abs(guess*guess-num)/num) <= tolerance);
     }
+
     public static double squareRoot(double num, double g){
       if(isCloseEnough(g,num)){
         return g;
@@ -19,7 +23,7 @@ public class recursion{
       }
     }
     public static double sqrt(double n, double tolerance){
-    
+
       }
     }
 
