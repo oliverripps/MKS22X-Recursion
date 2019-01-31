@@ -13,8 +13,8 @@ public class recursion{
       return ((Math.abs(guess*guess-num)/num) <= tolerance);
     }
 
-    public static double squareRoot(double num, double g){
-      if(isCloseEnough(g,num)){
+    public static double squareRoot(double num, double g, double t){
+      if(isCloseEnough(g,num,t)){
         return g;
       }
       else{
@@ -23,7 +23,7 @@ public class recursion{
       }
     }
     public static double sqrt(double n, double tolerance){
-
+      return squareRoot(n,n/2,tolerance);
       }
     }
 
