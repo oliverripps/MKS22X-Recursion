@@ -53,15 +53,8 @@ public class recursion{
       }
     }
     public static ArrayList<Integer> makeAllSums(int n){
-      ArrayList<Integer> sums = new ArrayList<Integer>(0);
-      while (n!=0){
-        sums.add(n);
-        sums.add(0);
-        return makeAllSums(n-1);
-      }
-      else{
-      return sums;
-    }
+      ArrayList<Integer> nums = new ArrayList<Integer>(0);
+      return makeAllSumsHelp(n,0,0,nums);
   }
 
 
