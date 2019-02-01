@@ -6,7 +6,7 @@ public class recursion{
      *precondition: n is non-negative
 
     */
-    public static double isCloseEnough(double guess, double num, double tolerance){
+    public static boolean isCloseEnough(double guess, double num, double tolerance){
       if(num==0){
         return (guess==0);
       }
