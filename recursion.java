@@ -48,7 +48,8 @@ public class recursion{
         sums.add(sum);
       }
       else{
-        sums.add(index)
+        makeAllSumsHelp(n-1, index+1, sum+n, sums);
+        makeAllSumsHelp(n-1, index+1, sum , sums);
       }
     }
     public static ArrayList<Integer> makeAllSums(int n){
