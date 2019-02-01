@@ -49,10 +49,10 @@ public class recursion{
         makeAllSumsHelp(n-1, index+1, sum+n, sums);
         makeAllSumsHelp(n-1, index+1, sum , sums);
       }
-      else{
-        return sums;
-      }
+      return sums;
     }
+
+
 
 
     public static ArrayList<Integer> makeAllSums(int n){
