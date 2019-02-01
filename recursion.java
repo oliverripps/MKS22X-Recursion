@@ -40,10 +40,12 @@ public class recursion{
       else if(n<3){
         return 1;
       }
-      return fib(n,0,1)
+      return fib(n,0,1);
     }
+
     public static int fib(int n,int prev, int pprev){
-      
+      return fib(n - 1, pprev, prev + pprev);
+   }
     }
 
 
