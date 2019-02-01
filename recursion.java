@@ -44,14 +44,17 @@ public class recursion{
 
 
     public static ArrayList<Integer> makeAllSumsHelp(int n, int index, int sum, ArrayList<Integer> sums){
-      if(index==n){
+      if(index<=n){
         sums.add(sum);
-      }
-      else{
         makeAllSumsHelp(n-1, index+1, sum+n, sums);
         makeAllSumsHelp(n-1, index+1, sum , sums);
       }
+      else{
+        return sums;
+      }
     }
+
+
     public static ArrayList<Integer> makeAllSums(int n){
       ArrayList<Integer> nums = new ArrayList<Integer>(0);
       return makeAllSumsHelp(n,0,0,nums);
@@ -69,6 +72,7 @@ public class recursion{
       System.out.println("Should print around 0: " + fib(0));
       System.out.println("Should print around 5: " + fib(5));
       System.out.println("Should print around 55: " + fib(10));
+      System.out.println(makeAllSums(5));
 
 
     }
