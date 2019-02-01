@@ -32,9 +32,25 @@ public class recursion{
       return fib(n - 1, pprev, prev + pprev);//recal recursivly
    }
 
+   public boolean groupSum(int start, int[] nums, int target) {
+     if(target==0){
+       return true;
+     }
+     if(start==nums.length){
+       return false;
+     }
+     return groupSum(start+1,nums,target-nums[start]) || groupSum(start+1,nums,target);
+   }
 
 
-
+    public static ArrayList<Integer> makeAllSumsHelp(int n, int index, int sum, ArrayList<Integer> sums){
+      if(index==n){
+        sums.add(sum);
+      }
+      else{
+        sums.add(index)
+      }
+    }
     public static ArrayList<Integer> makeAllSums(int n){
       ArrayList<Integer> sums = new ArrayList<Integer>(0);
       while (n!=0){
