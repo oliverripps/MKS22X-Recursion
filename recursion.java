@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class recursion{
     public static double squareRoot(double num, double g, double t){
       if(num==0){//making sure 0 is accounted for because would throw error in % calculation
@@ -33,11 +35,19 @@ public class recursion{
 
 
 
-    public static ArrayList<Integer> makeAllSums(){
-
-
-
+    public static ArrayList<Integer> makeAllSums(int n){
+      ArrayList<Integer> sums = new ArrayList<Integer>(0);
+      while (n!=0){
+        sums.add(n);
+        sums.add(0);
+        return makeAllSums(n-1);
+      }
+      else{
+      return sums;
     }
+  }
+
+
 
 
     public static void main(String[] args){
