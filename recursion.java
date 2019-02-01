@@ -33,9 +33,19 @@ public class recursion{
      *fib(0) = 1; fib(1) = 1; fib(5) = 5
      *precondition: n is non-negative
      */
-    /*public static int fib(int n){
+    public static int fib(int n){
+      if(n==0){
+        return 0;
+      }
+      else if(n<3){
+        return 1;
+      }
+      return fib(n,0,1)
+    }
+    public static int fib(int n,int prev, int pprev){
+      
+    }
 
-    }*/
 
     /*As Per classwork*/
     /*public static ArrayList<Integer> makeAllSums(){
@@ -43,8 +53,9 @@ public class recursion{
 
 
     public static void main(String[] args){
-      System.out.println(sqrt(64,.01));
-
+      System.out.println("Should print around 8: " + sqrt(64,.01));
+      System.out.println("Should print around 9: " + sqrt(81,.01));
+      System.out.println("Should print around 26: " + sqrt(676,.01));
 
 
     }
