@@ -34,19 +34,20 @@ public class recursion{
      *precondition: n is non-negative
      */
     public static int fib(int n){
-      if(n==0){
-        return 0;
-      }
-      else if(n<3){
-        return 1;
-      }
       return fib(n,0,1);
     }
 
     public static int fib(int n,int prev, int pprev){
+      if (n == 0){
+        return 0;
+      }
+      if (n == 1){
+        return pprev;
+      }
+
       return fib(n - 1, pprev, prev + pprev);
    }
-    }
+
 
 
     /*As Per classwork*/
@@ -55,9 +56,14 @@ public class recursion{
 
 
     public static void main(String[] args){
+      System.out.println("Testing square root...");
       System.out.println("Should print around 8: " + sqrt(64,.01));
       System.out.println("Should print around 9: " + sqrt(81,.01));
       System.out.println("Should print around 26: " + sqrt(676,.01));
+      System.out.println("Testing fibbonaci...");
+      System.out.println("Should print around 0: " + fib(0));
+      System.out.println("Should print around 5: " + fib(5));
+      System.out.println("Should print around 55: " + fib(10));
 
 
     }
