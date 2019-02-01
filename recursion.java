@@ -5,21 +5,23 @@ public class recursion{
      *tolerance is the allowed percent error the squared answer is away from n.
      *precondition: n is non-negative
 
-    */
+
     public static boolean isCloseEnough(double guess, double num, double tolerance){
-      if(num==0){
-        return (guess==0);
+      if(num==0.0){
+        return (guess==0.0);
       }
       return ((Math.abs(guess*guess-num)/num) <= tolerance);
-    }
-
+    }*/
     public static double squareRoot(double num, double g, double t){
-      if(isCloseEnough(g,num,t)){
+      if(num==0){
+        return 0.0;
+      }
+      if((Math.abs((num-g*g) / num) <= t)){
         return g;
       }
       else{
-        double guess=((num/g + g)/2);
-        squareRoot(num,guess,t);
+        double guess=(((num/g) + g)/2);
+        return squareRoot(num,guess,t);
       }
     }
     public static double sqrt(double n, double tolerance){
