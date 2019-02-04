@@ -74,8 +74,9 @@ public class recursion{
       System.out.println("Should print 0: " + fib(0));
       System.out.println("Should print 5: " + fib(5));
       System.out.println("Should print 55: " + fib(10));
-      System.out.println("Should print [1]: " + makeAllSums(1));
-      System.out.println("Should print [1]: " + makeAllSums(2));
+      System.out.println("Should print [1, 0]: " + makeAllSums(1));
+      System.out.println("Should print [3, 2, 1, 0]: " + makeAllSums(2));
+      System.out.println("Should print [15, 14, 13, 12, 12, 11, 10, 9, 11, 10, 9, 8, 8, 7, 6, 5, 10, 9, 8, 7, 7, 6, 5, 4, 6, 5, 4, 3, 3, 2, 1, 0]: " + makeAllSums(5));
 
 
     }
