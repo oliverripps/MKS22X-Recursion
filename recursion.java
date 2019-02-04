@@ -1,6 +1,6 @@
 import java.util.ArrayList;
-
 public class recursion{
+
     public static double squareRoot(double num, double g, double t){
       if(num==0){//making sure 0 is accounted for because would throw error in % calculation
         return 0.0;
@@ -51,7 +51,7 @@ public class recursion{
 
 
 
-    public static void main(String[] args){//testing each function
+    public static void main(String[] args){ //testing each function
       System.out.println("Testing square root...");
       System.out.println("Should print around 8: " + sqrt(64,.01));
       System.out.println("Should print around 9: " + sqrt(81,.01));
@@ -63,8 +63,6 @@ public class recursion{
       System.out.println("Should print [1, 0]: " + makeAllSums(1));
       System.out.println("Should print [3, 2, 1, 0]: " + makeAllSums(2));
       System.out.println("Should print [15, 14, 13, 12, 12, 11, 10, 9, 11, 10, 9, 8, 8, 7, 6, 5, 10, 9, 8, 7, 7, 6, 5, 4, 6, 5, 4, 3, 3, 2, 1, 0]: " + makeAllSums(5));
-
-
     }
 
 }
