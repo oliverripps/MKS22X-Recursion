@@ -32,40 +32,26 @@ public class recursion{
       return fib(n - 1, pprev, prev + pprev);//recal recursivly
    }
 
-   public boolean groupSum(int start, int[] nums, int target) {
-     if(target==0){
-       return true;
-     }
-     if(start==nums.length){
-       return false;
-     }
-     return groupSum(start+1,nums,target-nums[start]) || groupSum(start+1,nums,target);
-   }
-
-
     public static void makeAllSumsHelp(int n, int currsum, ArrayList<Integer> sums){
-      if(n==0){
+      if(n==0){//once it reaches 0, just add 0
         sums.add(currsum);
       }
       else{
-        makeAllSumsHelp(n-1, n+currsum, sums);//add the current number
-        makeAllSumsHelp(n-1, currsum, sums);//dont add the current number
+        makeAllSumsHelp(n-1, n+currsum, sums);//add the current number and decreases n for that branch
+        makeAllSumsHelp(n-1, currsum, sums);//dont add the current number and decreases n for that branch
       }
     }
 
-
-
-
     public static ArrayList<Integer> makeAllSums(int n){
       ArrayList<Integer> nums = new ArrayList<Integer>(0);
-      makeAllSumsHelp(n,0,nums);
-      return nums;
+      makeAllSumsHelp(n,0,nums);//calls helper with n as top numberto be sumed, currsum as 0, and array list as line before
+      return nums;//returns stringed array list with added sums
   }
 
 
 
 
-    public static void main(String[] args){
+    public static void main(String[] args){//testing each function
       System.out.println("Testing square root...");
       System.out.println("Should print around 8: " + sqrt(64,.01));
       System.out.println("Should print around 9: " + sqrt(81,.01));
