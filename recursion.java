@@ -43,7 +43,7 @@ public class recursion{
    }
 
 
-    public static ArrayList<Integer> makeAllSumsHelp(int n, int index, int sum, ArrayList<Integer> sums){
+    public static ArrayList<Integer> makeAllSumsHelp(int n, int index, int sum){
       if(index<=n){
         sums.add(sum);
         makeAllSumsHelp(n-1, index+1, sum+n, sums);
@@ -57,7 +57,8 @@ public class recursion{
 
     public static ArrayList<Integer> makeAllSums(int n){
       ArrayList<Integer> nums = new ArrayList<Integer>(0);
-      return makeAllSumsHelp(n,0,0,nums);
+      rmakeAllSumsHelp(n,0,sum);
+      return sum;
   }
 
 
@@ -69,9 +70,9 @@ public class recursion{
       System.out.println("Should print around 9: " + sqrt(81,.01));
       System.out.println("Should print around 26: " + sqrt(676,.01));
       System.out.println("Testing fibbonaci...");
-      System.out.println("Should print around 0: " + fib(0));
-      System.out.println("Should print around 5: " + fib(5));
-      System.out.println("Should print around 55: " + fib(10));
+      System.out.println("Should print 0: " + fib(0));
+      System.out.println("Should print 5: " + fib(5));
+      System.out.println("Should print 55: " + fib(10));
       System.out.println(makeAllSums(5));
 
 
