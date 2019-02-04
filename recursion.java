@@ -58,7 +58,8 @@ public class recursion{
 
     public static ArrayList<Integer> makeAllSums(int n){
       ArrayList<Integer> nums = new ArrayList<Integer>(0);
-      rmakeAllSumsHelp(n,0,sum);
+      makeAllSumsHelp(n,0,sum);
+      return sum;
   }
 
 
