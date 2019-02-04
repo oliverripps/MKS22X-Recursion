@@ -43,13 +43,14 @@ public class recursion{
    }
 
 
-    public static ArrayList<Integer> makeAllSumsHelp(int n, int index, int sum){
-      if(index<=n){
-        sums.add(sum);
-        makeAllSumsHelp(n-1, index+1, sum+n, sums);
-        makeAllSumsHelp(n-1, index+1, sum , sums);
+    public static ArrayList<Integer> makeAllSumsHelp(int n, int currsum ArrayList<Integer> sums){
+      if(n==0){
+        sums.add(currsum);
       }
-      return sums;
+      else{
+        makeAllSumsHelp(n-1, n+currsum, sums);
+        makeAllSumsHelp(n-1, currsum, sums);
+      }
     }
 
 
@@ -58,7 +59,6 @@ public class recursion{
     public static ArrayList<Integer> makeAllSums(int n){
       ArrayList<Integer> nums = new ArrayList<Integer>(0);
       rmakeAllSumsHelp(n,0,sum);
-      return sum;
   }
 
 
